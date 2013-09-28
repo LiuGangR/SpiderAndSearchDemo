@@ -1,0 +1,24 @@
+/**
+ * $Id$
+ * Copyright 2009-2012 Oak Pacific Interactive. All rights reserved.
+ */
+package com.renren.application.service.android.search.analyzer;
+
+import java.io.Reader;
+
+import org.apache.lucene.analysis.util.TokenizerFactory;
+
+
+/**
+ * 
+ * 
+ * @author <a href="mailto:liu.gang@renren-inc.com">刘刚</a>
+ * @version 2013-7-30下午3:23:19
+ */
+public class PrefixTokenizerFactory extends TokenizerFactory {
+    
+    public PrefixTokenizer create(Reader in) {
+      return new PrefixTokenizer(in);
+    }
+  }
+

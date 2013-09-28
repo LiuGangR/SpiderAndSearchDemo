@@ -1,0 +1,31 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'war'
+apply plugin: 'jetty'
+
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+dependencies {
+    compile "net.paoding:rose:1.2-SNAPSHOT"
+    compile "net.paoding:rose-jade:1.2-SNAPSHOT"
+    compile "sslext:sslext:1.10-4"
+    compile "org.jsoup:jsoup:1.7.2"
+    compile "org.jsoup:jsoup:1.7.2"
+    compile "org.jsoup:jsoup:1.7.2"
+    compile "org.jsoup:jsoup:1.7.2"
+    compile "org.jsoup:jsoup:1.7.2"
+    compile "org.apache.lucene:lucene-core:4.2.0"
+    compile "org.apache.lucene:lucene-analyzers-common:4.2.0"
+    compile "org.apache.lucene:lucene-queryparser:4.2.0"
+    compile "org.json:json:20090211"
+
+
+ compile files('/Users/r/Documents/RenRen/software/maven-repository/org/wltea4pinyin/IKAnalyzer4Pinyin/4.1.0/IKAnalyzer4Pinyin-4.1.0.jar')
+ compile files('/Users/r/Documents/jar/JPinyin.jar')
+
+
+}

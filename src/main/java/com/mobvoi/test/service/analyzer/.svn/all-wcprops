@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/api/!svn/ver/31675/xiaonei/renren_youtui/src/main/java/com/renren/application/service/android/search/analyzer
+END
+PrefixAnalyzer.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/api/!svn/ver/31675/xiaonei/renren_youtui/src/main/java/com/renren/application/service/android/search/analyzer/PrefixAnalyzer.java
+END
+PrefixTokenizer.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/api/!svn/ver/31675/xiaonei/renren_youtui/src/main/java/com/renren/application/service/android/search/analyzer/PrefixTokenizer.java
+END
+PrefixTokenizerFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/api/!svn/ver/31675/xiaonei/renren_youtui/src/main/java/com/renren/application/service/android/search/analyzer/PrefixTokenizerFactory.java
+END
