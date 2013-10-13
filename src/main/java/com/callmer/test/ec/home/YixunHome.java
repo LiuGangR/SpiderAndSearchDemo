@@ -1,12 +1,12 @@
-package com.mobvoi.test.home;
+package com.callmer.test.ec.home;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.mobvoi.test.dao.YixunProductDAO;
-import com.mobvoi.test.model.YixunProduct;
+import com.callmer.test.ec.dao.YixunProductDAO;
+import com.callmer.test.ec.model.YixunProduct;
 
 @Service
 public class YixunHome {

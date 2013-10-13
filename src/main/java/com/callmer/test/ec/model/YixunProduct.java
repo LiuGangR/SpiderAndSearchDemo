@@ -1,4 +1,4 @@
-package com.mobvoi.test.model;
+package com.callmer.test.ec.model;
 
 public class YixunProduct {
 	

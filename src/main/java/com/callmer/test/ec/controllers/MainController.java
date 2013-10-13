@@ -1,4 +1,4 @@
-package com.mobvoi.test.controllers;
+package com.callmer.test.ec.controllers;
 
 import java.util.List;
 
@@ -12,10 +12,10 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.mobvoi.test.home.YixunHome;
-import com.mobvoi.test.model.YixunProduct;
-import com.mobvoi.test.service.YixunSearchService;
-import com.mobvoi.test.service.YixunSpiderService;
+import com.callmer.test.ec.home.YixunHome;
+import com.callmer.test.ec.model.YixunProduct;
+import com.callmer.test.ec.service.YixunSearchService;
+import com.callmer.test.ec.service.YixunSpiderService;
 /**
  * controller
  * @author <a href="mailto:rebricate@gmail.com">刘刚</a>

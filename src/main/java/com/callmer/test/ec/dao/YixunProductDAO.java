@@ -1,4 +1,4 @@
-package com.mobvoi.test.dao;
+package com.callmer.test.ec.dao;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import net.paoding.rose.jade.annotation.DAO;
 import net.paoding.rose.jade.annotation.SQL;
 import net.paoding.rose.jade.annotation.SQLParam;
 
-import com.mobvoi.test.model.YixunProduct;
+import com.callmer.test.ec.model.YixunProduct;
 
 @DAO
 public interface YixunProductDAO {

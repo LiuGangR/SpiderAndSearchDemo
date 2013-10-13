@@ -1,4 +1,4 @@
-package com.mobvoi.test.service;
+package com.callmer.test.ec.service;
 
 import java.io.IOException;
 
@@ -9,8 +9,8 @@ import org.jsoup.select.Elements;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.mobvoi.test.home.YixunHome;
-import com.mobvoi.test.model.YixunProduct;
+import com.callmer.test.ec.home.YixunHome;
+import com.callmer.test.ec.model.YixunProduct;
 /**
  * 爬易迅数据的蜘蛛
  * @author <a href="mailto:rebricate@gmail.com">刘刚</a>

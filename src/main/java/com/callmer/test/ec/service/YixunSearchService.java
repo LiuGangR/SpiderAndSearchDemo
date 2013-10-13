@@ -1,4 +1,4 @@
-package com.mobvoi.test.service;
+package com.callmer.test.ec.service;
 
 import java.io.File;
 import java.io.IOException;
@@ -47,9 +47,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.wltea4pinyin.analyzer.lucene.IKAnalyzer4PinYin;
 
-import com.mobvoi.test.home.YixunHome;
-import com.mobvoi.test.model.YixunProduct;
-import com.mobvoi.test.service.analyzer.PrefixAnalyzer;
+import com.callmer.test.ec.home.YixunHome;
+import com.callmer.test.ec.model.YixunProduct;
+import com.callmer.test.ec.service.analyzer.PrefixAnalyzer;
 /**
  * 搜索的服务，依靠于lucene
  * @author <a href="mailto:rebricate@gmail.com">刘刚</a>

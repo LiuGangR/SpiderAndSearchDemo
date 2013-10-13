@@ -2,7 +2,7 @@
  * $Id$
  * Copyright 2009-2012 Oak Pacific Interactive. All rights reserved.
  */
-package com.mobvoi.test.service.analyzer;
+package com.callmer.test.ec.service.analyzer;
 
 import java.io.IOException;
 import java.io.Reader;
