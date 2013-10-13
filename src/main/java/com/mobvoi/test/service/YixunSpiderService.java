@@ -32,6 +32,12 @@ public class YixunSpiderService {
 
 	private YixunSpiderService(){}
 	
+	/**
+	 * 开始爬数据，默认数据是按id递增的
+	 * @param beginId 开始的id
+	 * @param count 每轮爬的数量
+	 * @param times 重复多少轮
+	 */
 	public void sipder(int beginId, int count, int times) {
 		YixunProduct product ;
 		System.out.println("Yixun product pider begin!");
