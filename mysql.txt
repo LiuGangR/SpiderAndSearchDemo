@@ -1,0 +1,10 @@
+CREATE TABLE `yixun_product` (
+`id` int(11) unsigned NOT NULL default 0,
+`category` varchar(20﻿) default null,
+`price` float  unsigned default 0.0,
+name varchar(100) default null,
+description varchar(1000) default null ,
+
+primary key (id)
+
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
