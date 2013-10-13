@@ -1,2 +1,21 @@
+这是一个抓取电商商品信息，并提供搜索接口的例子。
+	采用的技术：
+		代码管理github
+		持续集成gradle
+		web框架rose3.0(基于Spring3.0)
+		数据库mysql
+		商品抓取id遍历，Jsoup解析网页
+		搜索lucene
 
-这是一个抓取易迅商品的demo
+	现在的接口：  
+		抓取数据：http://localhost/spider ，把易迅的数据抓取下来，只抓一万个左右，放在数据库中  
+		生成索引：http://localhost/index ，把数据库中的数据用lucene来做索引
+      	搜索结果：http://localhost/search?keyword=midea&begin=0&count=20&cate=饮水机&minPrice=100.1&maxPrice=2000  
+ 			必填：keyword 是关键字，对名称和描述有用，begin和count是对结果翻页    
+ 			选填：cate是分类，也是用lucene做的索引，还有就是价格区间的选择
+      	搜索建议：http://localhost/suggest?begin=0&count=100&keyword=meiru
+			是对名称做了最前匹配，包括名称的拼音和首字母   
+ 	查看所有数据：http://localhost/list?beginId=1&count=100 beginId：开始的id，count：数量
+
+	现在的电商中，京东和易迅id是顺序的，amazon和当当的id是hash的，所以我的这个demo只能抓京东和易迅的数据。但是京东的价格不是直接展示在页面上，而是通过js单独发请求得到的，比较麻烦，第一版demo暂时只能抓取易迅的数据。
+	搜索分搜索建议和搜索结果，搜索建议是把商品名称做了汉子，汉子转换成全拼及首字母的前缀匹配；搜索结果是对商品名称和描述做了全文索引。
