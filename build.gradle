@@ -25,9 +25,9 @@ dependencies {
     compile "org.springframework:spring-web:3.1.2.RELEASE"
     compile "org.springframework:spring-jdbc:3.1.2.RELEASE"
     
-    compile files('/home/r/data/jar/paoding-rose-1.2-SNAPSHOT.jar')
-    compile files('/home/r/data/jar/paoding-rose-jade-1.2-SNAPSHOT.jar')
-    compile files('/home/r/data/jar/IKAnalyzer4Pinyin-4.1.0.jar')
-    compile files('/home/r/data/jar/JPinyin.jar')
+    compile files('/data/jar/paoding-rose-1.2-SNAPSHOT.jar')
+    compile files('/data/jar/paoding-rose-jade-1.2-SNAPSHOT.jar')
+    compile files('/data/jar/IKAnalyzer4Pinyin-4.1.0.jar')
+    compile files('/data/jar/JPinyin.jar')
 
 }
