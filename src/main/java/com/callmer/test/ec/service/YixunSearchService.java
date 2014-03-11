@@ -76,6 +76,8 @@ public class YixunSearchService {
     //使用prefix分词器分词的首字母name
     private static String FEILD_NAME_SHOUZIMU = "name_shouzimu";
 
+    private static HashMap<String,String> LUCENE_KEYWORD_MAP  = new HashMap<String,String>();
+    
     private static String FEILD_ID = "id";
 
     private static String FEILD_CATE = "cate";
@@ -115,6 +117,13 @@ public class YixunSearchService {
     private static QueryParser SUGGEST_SHOUZIMU_QP = new QueryParser(Version.LUCENE_42,
             FEILD_NAME_SHOUZIMU, new PrefixAnalyzer());
 
+    
+    static {
+    	LUCENE_KEYWORD_MAP.put("AND", "and");
+    	LUCENE_KEYWORD_MAP.put("OR", "or");
+    	LUCENE_KEYWORD_MAP.put("NOT", "not");
+    }
+    
     
     
     @Autowired
@@ -294,7 +303,13 @@ public class YixunSearchService {
     public JSONArray getResult(int begin, int count, String keyword,
     		float minPrice, float maxPrice, String cate) {
         //searchLogger.info("Result begin:" + begin + " count:" + count + " keyword:" + keyword);
+    	if(keyword == null){
+    		return null;
+    	}
+		keyword = luceneKeywordFilter(keyword);
 
+    	
+    	
     	JSONArray productArray = new JSONArray();
 
         if (resultIndexSearcher == null) {
@@ -371,6 +386,11 @@ public class YixunSearchService {
      * @return
      */
     public JSONArray getSuggest(int begin, int count, String keyword) {
+    	
+    	if(keyword == null){
+    		return null;
+    	}
+		keyword = luceneKeywordFilter(keyword);
 
     	JSONArray nameArray = new JSONArray();
 
@@ -441,6 +461,18 @@ public class YixunSearchService {
         }
     }
 
-	
+    private String luceneKeywordFilter(String keyword) {
+        if (LUCENE_KEYWORD_MAP.get(keyword) != null) {
+            //替换lucene关键字的查询 AND OR NOR
+            keyword = LUCENE_KEYWORD_MAP.get(keyword);
+        } else {
+            //替换特殊字符 " + – _ &| ! ( ) { } [ ] ^ ~ * ? : \ /
+            keyword = keyword
+                    .replaceAll(
+                            "\"|\\+|\\/|\\-|\\-|\\&|\\||\\!|\\(|\\)|\\{|\\}|\\[|\\]|\\^|\\~|\\*|\\?|\\:|\\\\",
+                            " ");
+        }
+        return keyword.trim();
+    }
 	
 }
